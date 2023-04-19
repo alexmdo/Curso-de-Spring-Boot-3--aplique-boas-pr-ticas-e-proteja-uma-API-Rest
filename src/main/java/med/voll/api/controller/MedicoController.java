@@ -65,4 +65,14 @@ public class MedicoController {
         return ResponseEntity.noContent().build();
     }
 
+    @GetMapping("/{id}")
+    public ResponseEntity<DadosDetalhamentoMedico> detalhar(@PathVariable Long id) {
+        var medico = repository.findById(id);
+        if (medico.isEmpty()) {
+            return ResponseEntity.notFound().build();
+        }
+
+        return ResponseEntity.ok(new DadosDetalhamentoMedico(medico.get()));
+    }
+
 }
