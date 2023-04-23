@@ -6,3 +6,5 @@ INSERT INTO medicos (ativo, crm, email, nome, telefone, especialidade, cep, logr
 INSERT INTO medicos (ativo, crm, email, nome, telefone, especialidade, cep, logradouro, numero, complemento, bairro, cidade, uf) VALUES (true, '5678901', 'ted@example.com', 'Ted Johnson', '(55) 55555-5555', 'GINECOLOGIA', '87654-321', 'Rua Dos Carros', '246', 'Sala 104', 'Pinheiros', 'São Paulo', 'SP');
 INSERT INTO medicos (ativo, crm, email, nome, telefone, especialidade, cep, logradouro, numero, complemento, bairro, cidade, uf) VALUES (true, '6789012', 'kate@example.com', 'Kate Williams', '(44) 44444-4444', 'ORTOPEDIA', '23456-789', 'Avenida Do Rio', '987', 'Sala 201', 'Mooca', 'São Paulo', 'SP');
 INSERT INTO medicos (ativo, crm, email, nome, telefone, especialidade, cep, logradouro, numero, complemento, bairro, cidade, uf) VALUES (true, '7890123', 'sam@example.com', 'Sam Davis', '(33) 33333-3333', 'ONCOLOGIA', '87654-321', 'Rua Da Praia', '654', 'Sala 203', 'Santos', 'São Paulo', 'SP');
+
+INSERT INTO users (login, password) VALUES ('abc@abc.com', '$2a$10$XbMJP7iJ2hukKJ6VX6V2PefRgM0AAQ4/0hs5M4ASm1DfambMfS3cu');
