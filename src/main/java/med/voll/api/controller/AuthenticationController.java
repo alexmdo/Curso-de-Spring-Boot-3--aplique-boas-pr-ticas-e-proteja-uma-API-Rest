@@ -23,10 +23,12 @@ public class AuthenticationController {
     private final TokenService tokenService;
 
     @PostMapping
-    public ResponseEntity<String> login(@RequestBody @Valid AuthenticationDataDTO authenticationDataDTO) {
+    public ResponseEntity<TokenJWTDTO> login(@RequestBody @Valid AuthenticationDataDTO authenticationDataDTO) {
         var token = new UsernamePasswordAuthenticationToken(authenticationDataDTO.login(), authenticationDataDTO.password());
         var authentication = authenticationManager.authenticate(token);
-        return ResponseEntity.ok(tokenService.generateToken((User) authentication.getPrincipal()));
+        var jwtToken = tokenService.generateToken((User) authentication.getPrincipal());
+
+        return ResponseEntity.ok(new TokenJWTDTO(jwtToken));
     }
     
 }
